@@ -15,5 +15,6 @@ add_executable (day2_1 "day2_1.cpp")
 add_executable (day2_2 "day2_2.cpp")
 add_executable (day3_1 "day3_1.cpp")
 add_executable (day3_2 "day3_2.cpp")
+add_executable (day4_1 "day4_1.cpp")
 
 file(COPY "${CMAKE_CURRENT_SOURCE_DIR}/input" DESTINATION "${CMAKE_CURRENT_BINARY_DIR}")
