@@ -1,3 +1,4 @@
+#include <chrono>
 #include <fstream>
 #include <iostream>
 #include <set>
@@ -99,10 +100,17 @@ size_t solve(std::fstream &in) {
 }
 
 int main() {
+  const auto start = std::chrono::high_resolution_clock::now();
+
   std::fstream in_file;
   in_file.open("input/day8.txt", std::ios::in);
   if (in_file.is_open()) {
     std::cout << solve(in_file) << '\n';
   }
   in_file.close();
+
+  const auto stop = std::chrono::high_resolution_clock::now();
+  const auto duration =
+      std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
+  std::cout << "Time: " << duration.count() << " us\n";
 }
