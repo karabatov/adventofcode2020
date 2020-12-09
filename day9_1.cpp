@@ -24,7 +24,7 @@ size_t solve(std::fstream &in) {
   std::vector<size_t> num{};
   std::string line{};
   while (getline(in, line)) {
-    const auto next = std::stoi(line);
+    const auto next = std::stoull(line);
     if (num.size() > preamble) {
       if (!is_valid(num, preamble, next))
         return next;
