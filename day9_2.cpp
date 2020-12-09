@@ -7,8 +7,8 @@
 
 // https://adventofcode.com/2020/day/9#part2
 
-bool is_valid(const std::vector<size_t> &v, const int preamble,
-              const int next) {
+bool is_valid(const std::vector<size_t> &v, const size_t preamble,
+              const size_t next) {
   for (size_t i = v.size() - preamble; i < v.size(); i++) {
     for (size_t j = v.size() - preamble; j < v.size(); j++) {
       if (i == j)
@@ -20,7 +20,7 @@ bool is_valid(const std::vector<size_t> &v, const int preamble,
   return false;
 }
 
-size_t find_adjacent(const std::vector<size_t> &v, const int next) {
+size_t find_adjacent(const std::vector<size_t> &v, const size_t next) {
   for (size_t i = 0; i < v.size(); i++) {
     size_t sum{0};
     for (size_t j = i; j < v.size(); j++) {

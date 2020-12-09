@@ -6,8 +6,8 @@
 
 // https://adventofcode.com/2020/day/9
 
-bool is_valid(const std::vector<size_t> &v, const int preamble,
-              const int next) {
+bool is_valid(const std::vector<size_t> &v, const size_t preamble,
+              const size_t next) {
   for (size_t i = v.size() - preamble; i < v.size(); i++) {
     for (size_t j = v.size() - preamble; j < v.size(); j++) {
       if (i == j)
